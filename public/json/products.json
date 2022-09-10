@@ -1,0 +1,63 @@
+[
+    {
+        "id": 1,
+        "nombre": "RIÑONERA VILLARICA",
+        "marca": "Exo",
+        "modelo": "44p1",
+        "detalle": "Riñonera ultra liviana. Porta celular, porta llave, con dos bolsillos separados, el bolsillo frontal expande.",
+        "precio": 3000,
+        "stock": 30,
+        "img": "RinoVillaRica-2.jpg"
+    },
+    {
+        "id": 2,
+        "nombre": "BOTELLA MALLORCA",
+        "marca": "Exo",
+        "detalle": "Botella de 250 cc. con funda de lycra para llevar en la mano. Toda la funda sirve como Bolsillo para objetos pequeños, llaves, tarjeta, dinero… Negro con detalles de color flúo.",
+        "modelo": "j45",
+        "precio": 2400,
+        "stock": 200,
+        "img": "botellaMallorca.jpg"
+    },
+    {
+        "id": 3,
+        "nombre": "GORRO TRAIL",
+        "marca": "Exo",
+        "detalle":"Gorro de abrigo intermedio con sujetador para cabello o para llevarlo enganchado en mochilas o cintos",
+        "modelo": "50U",
+        "precio": 3000,
+        "stock": 15,
+        "img": "gorro.jpg"
+    },
+    {
+        "id": 4,
+        "nombre": "RIÑONERA FIT",
+        "marca": "Exo",
+        "detalle":"Riñonera de LYCRA que permite transportar celulares grandes, llaves. En carrera para llevar geles o gomitas, barras, turrones.",
+        "modelo": "40PP",
+        "precio": 3000,
+        "stock": 150,
+        "img": "RinoFit51.jpg"
+    },
+    {
+        "id": 5,
+        "nombre": "MANGUITAS",
+        "marca": "Exo",
+        "detalle":"Tela dry fit elastizada.Ideal abrigo para temporada otoño-invierno. Guante incorporado.    ",
+        "modelo": "G02",
+        "precio": 3600,
+        "stock": 7,
+        "img": "maguitas-guante.jpg"
+    },
+    {
+        "id": 6,
+        "nombre": "PORTA CELULAR NEO+CRISTAL GRANDE",
+        "marca": "Exo",
+        "detalle":"Porta celular impermeable. Confeccionado en neoprene verdadero de 3mm. Posee un frente transparente que permite el uso del celular sin tener que retirarlo. Tamaño máximo de altura de celular: 17 cm. Ajuste con abrojo en el brazo",
+        "modelo": "Porta-juan",
+        "precio": 3600.00,
+        "stock": 20,
+        "img": "PortaCristal-1.jpg"
+    }
+   
+]
