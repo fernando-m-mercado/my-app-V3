@@ -2,8 +2,12 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
 import './App.css'
 import CartIcon from './CartIcon';
+import ProductDetails from './ProductDetails';
+
+
 const ItemDetailContainer = () => {
     const [producto, setProductoCard] = useState([]);
+    const [cantidad, setCantidad] = useState(1);
     const {id} = useParams()
     useEffect(() => {
         fetch("../json/products.json")
@@ -15,6 +19,23 @@ const ItemDetailContainer = () => {
      
     }, []);
 
+
+    const agregarAlCarrito = (producto,cantidad) => {
+        const productoCarrito = {id: producto.id,cantidad: cantidad}
+        console.log(productoCarrito)
+    }
+
+    const cantidadProductos = (operacion) => {
+        if(operacion == "+") {
+            if(cantidad < producto.stock)
+                setCantidad(cantidad +1)
+        } else {
+            if(cantidad > 1) {
+                setCantidad(cantidad -1)
+            }
+        }
+    }
+
     return (
        
         <>
@@ -25,14 +46,8 @@ const ItemDetailContainer = () => {
                 </div>
             <div className="col-md-8">
                 <div className="card-body">
-                    <h5 className="card-title">{producto.nombre}</h5>
-                    <p className="card-text">Marca: {producto.marca} </p>
-                    <p className="card-text">Marca: {producto.detalle} </p>
-                    <p className="card-text">Modelo: {producto.modelo} </p>
-                    <p className="card-text">Precio: ${producto.precio} </p>
-                    <p className="card-text">Stock: ${producto.stock} </p>
-                    <button className='btn btn-dark'>Comprar </button>
-                    <button id="carrito-boton" className='btn btn-dark'>Agregar al Carrito  <CartIcon/></button>
+                    <ProductDetails producto={producto} />
+                    
                 </div>
             </div>
         </div>
@@ -41,4 +56,4 @@ const ItemDetailContainer = () => {
     );
 }
 
-export default ItemDetailContainer;
+export default ItemDetailContainer; 
