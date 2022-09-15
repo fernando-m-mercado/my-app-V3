@@ -1,12 +1,19 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import {Link} from 'react-router-dom'
+import { DarkModeContext } from '../context/DarkModeContext';
+
 const ItemListContainer = () => {
     const [productos, setProductos] = useState([]);
+   const {darkMode,toggleDarkmode}= useContext(DarkModeContext);
+
+ 
 
   useEffect(() => {
     fetch("./json/products.json")
     .then(response => response.json())
+
     .then(data => {
+
       const productCard = data.map((producto, indice) => 
         <div className="card" key={indice} style={{width: '18rem', margin:"3px"}}>
           <img src={"./img/" + producto.img} className="card-img-top" alt="..." />
@@ -28,10 +35,14 @@ const ItemListContainer = () => {
 
 
   return (
-    <div className="row">
-     
+   
+     <div className={darkMode ? 'darkMode row' : 'lightMode row'}>
+      <button className={darkMode ? 'btn btn-dark' : 'btn btn-dark'} onClick={() => toggleDarkmode()} >Cambiar Modo</button>
       {productos}
-    </div>  
+     </div>
+     
+      
+    
     
   );
   

@@ -17,3 +17,14 @@
 #link-navbar {
     color: white;
 }
+
+.darkMode {
+    background-color: black;
+    color: antiquewhite;
+}
+
+.lightMode {
+    background-color: antiquewhite;
+    color: black;
+}
+
